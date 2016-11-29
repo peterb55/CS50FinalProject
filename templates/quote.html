@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('quote') }}" method="get">
+<ul>
+    {% for quote in SQL %}
+        <li><input name="Value" type="stock" value="{{ stock }}"/>
+    {% endfor %}
+</ul>
+<input type="submit" value="Quote"/>
+</form>
+{% endblock %}
